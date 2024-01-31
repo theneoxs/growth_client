@@ -1,0 +1,593 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Resource/Fonts/ButtonStyle.tres" type="Theme" id=1]
+[ext_resource path="res://Scene/Configurator.gd" type="Script" id=2]
+[ext_resource path="res://Resource/Fonts/TextFontSubHeader.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resource/Fonts/TextFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resource/tache-300x300.png" type="Texture" id=5]
+[ext_resource path="res://Resource/Fonts/TextBlockFileData.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Resource/Fonts/Fifaks10Dev1.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=14]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 1.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.737255, 0.737255, 0.737255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 0.45098 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.945098, 0.945098, 0.945098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.431373, 0.431373, 0.431373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id=6]
+color = Color( 1, 1, 1, 0 )
+thickness = 10
+vertical = true
+
+[sub_resource type="DynamicFont" id=17]
+size = 14
+font_data = ExtResource( 7 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 17 )
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+LineEdit/fonts/font = ExtResource( 4 )
+LineEdit/styles/normal = SubResource( 13 )
+LineEdit/styles/read_only = SubResource( 14 )
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/styles/normal = SubResource( 15 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_readonly = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+TextEdit/styles/normal = SubResource( 16 )
+TextEdit/styles/read_only = SubResource( 14 )
+VScrollBar/styles/grabber = SubResource( 7 )
+VScrollBar/styles/grabber_highlight = SubResource( 8 )
+VScrollBar/styles/grabber_pressed = SubResource( 5 )
+VScrollBar/styles/scroll = SubResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.737255, 0.737255, 0.737255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 0.45098 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.945098, 0.945098, 0.945098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.431373, 0.431373, 0.431373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id=20]
+color = Color( 1, 1, 1, 0 )
+thickness = 10
+vertical = true
+
+[sub_resource type="Theme" id=9]
+VScrollBar/styles/grabber = SubResource( 21 )
+VScrollBar/styles/grabber_highlight = SubResource( 18 )
+VScrollBar/styles/grabber_pressed = SubResource( 19 )
+VScrollBar/styles/scroll = SubResource( 20 )
+
+[sub_resource type="Theme" id=11]
+default_font = ExtResource( 6 )
+Button/fonts/font = ExtResource( 6 )
+Fonts/fonts/large = ExtResource( 6 )
+Fonts/fonts/normal = ExtResource( 6 )
+Label/fonts/font = ExtResource( 6 )
+LineEdit/fonts/font = ExtResource( 6 )
+OptionButton/fonts/font = ExtResource( 6 )
+Tree/fonts/font = ExtResource( 6 )
+WindowDialog/fonts/title_font = ExtResource( 6 )
+
+[sub_resource type="Theme" id=12]
+default_font = ExtResource( 6 )
+Button/fonts/font = ExtResource( 6 )
+Fonts/fonts/large = ExtResource( 6 )
+Fonts/fonts/normal = ExtResource( 6 )
+Label/fonts/font = ExtResource( 6 )
+LineEdit/fonts/font = ExtResource( 6 )
+OptionButton/fonts/font = ExtResource( 6 )
+Tree/fonts/font = ExtResource( 6 )
+WindowDialog/fonts/title_font = ExtResource( 6 )
+
+[node name="Configurator" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ExitBtn" type="Button" parent="."]
+anchor_left = 0.0546875
+anchor_top = 0.88
+anchor_right = 0.201172
+anchor_bottom = 0.93
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Выход"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Based" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -405.0
+margin_top = -177.0
+margin_right = 405.0
+margin_bottom = 177.0
+
+[node name="CreateBtn" type="Button" parent="Based"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -32.0
+margin_right = -42.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Создать"
+
+[node name="LoadBtn" type="Button" parent="Based"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 40.0
+margin_top = -32.0
+margin_right = 248.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Загрузить"
+
+[node name="MainData" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 0.848333
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Header" type="Label" parent="MainData"]
+margin_left = 56.0
+margin_top = 51.0
+margin_right = 494.0
+margin_bottom = 69.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Введите основную информацию по схеме"
+valign = 1
+autowrap = true
+
+[node name="NameLine" type="LineEdit" parent="MainData"]
+anchor_left = 0.265625
+anchor_top = 0.186641
+anchor_right = 0.482422
+anchor_bottom = 0.233792
+theme = SubResource( 2 )
+text = "Тестовый текст"
+max_length = 40
+
+[node name="NameLabel" type="Label" parent="MainData"]
+margin_left = 56.0
+margin_top = 98.0
+margin_right = 234.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Название схемы"
+valign = 1
+autowrap = true
+
+[node name="TagLine" type="LineEdit" parent="MainData"]
+anchor_left = 0.265625
+anchor_top = 0.277014
+anchor_right = 0.482422
+anchor_bottom = 0.324165
+theme = SubResource( 2 )
+text = "Тестовый текст"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TagLabel" type="Label" parent="MainData"]
+margin_left = 56.0
+margin_top = 144.0
+margin_right = 234.0
+margin_bottom = 162.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Метка схемы"
+valign = 1
+autowrap = true
+
+[node name="DescField" type="TextEdit" parent="MainData"]
+anchor_left = 0.265625
+anchor_top = 0.373281
+anchor_right = 0.482422
+anchor_bottom = 0.575639
+theme = SubResource( 2 )
+text = "Тестовый текстТестовый текстТестовый текстТестовый текст Тестовый текстТестовый текстТестовый текстТестовый текст"
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="DescLabel" type="Label" parent="MainData"]
+margin_left = 56.0
+margin_top = 193.0
+margin_right = 234.0
+margin_bottom = 211.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Описание схемы"
+valign = 1
+autowrap = true
+
+[node name="PhotoLabel" type="Label" parent="MainData"]
+margin_left = 56.0
+margin_top = 316.0
+margin_right = 234.0
+margin_bottom = 334.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Фото схемы"
+valign = 1
+autowrap = true
+
+[node name="TextureRect" type="TextureRect" parent="MainData"]
+anchor_left = 0.265625
+anchor_top = 0.620825
+anchor_right = 0.334961
+anchor_bottom = 0.760315
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ReferenceRect" type="ReferenceRect" parent="MainData/TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0, 0, 0, 1 )
+border_width = 2.0
+editor_only = false
+
+[node name="ChoosePhotoBtn" type="Button" parent="MainData"]
+anchor_left = 0.354492
+anchor_top = 0.656189
+anchor_right = 0.481445
+anchor_bottom = 0.715128
+rect_min_size = Vector2( 100, 30 )
+theme = ExtResource( 1 )
+text = "Выбрать фото"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AdminLabel" type="Label" parent="MainData"]
+anchor_left = 0.539063
+anchor_top = 0.186641
+anchor_right = 0.712891
+anchor_bottom = 0.222004
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Админы:"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AdminList" type="RichTextLabel" parent="MainData"]
+anchor_left = 0.539063
+anchor_top = 0.233792
+anchor_right = 0.712891
+anchor_bottom = 0.614932
+theme = SubResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Я
+Анфимовский Д.В.
+Березовский В.В."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AdminSelectedBtn" type="Button" parent="MainData"]
+anchor_left = 0.539063
+anchor_top = 0.656189
+anchor_right = 0.712891
+anchor_bottom = 0.715128
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Выбрать админов"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ModerLabel" type="Label" parent="MainData"]
+anchor_left = 0.742188
+anchor_top = 0.186641
+anchor_right = 0.916016
+anchor_bottom = 0.222004
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Модераторы:"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ModerList" type="RichTextLabel" parent="MainData"]
+anchor_left = 0.742188
+anchor_top = 0.233792
+anchor_right = 0.916016
+anchor_bottom = 0.614932
+theme = SubResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ModerSelectedBtn" type="Button" parent="MainData"]
+anchor_left = 0.742188
+anchor_top = 0.656189
+anchor_right = 0.916016
+anchor_bottom = 0.715128
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Выбрать модераторов"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BlockLabel" type="Label" parent="MainData"]
+margin_left = 56.0
+margin_top = 408.0
+margin_right = 234.0
+margin_bottom = 426.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Всего блоков: 5"
+valign = 1
+autowrap = true
+
+[node name="BlockBtn" type="Button" parent="MainData"]
+anchor_left = 0.265625
+anchor_top = 0.801572
+anchor_right = 0.481445
+anchor_bottom = 0.860511
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Содержимое схемы"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="StatusLine" type="OptionButton" parent="MainData"]
+visible = false
+anchor_left = 0.539063
+anchor_top = 0.89391
+anchor_right = 0.712891
+anchor_bottom = 0.952849
+theme = ExtResource( 1 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="StatusLabel" type="Label" parent="MainData"]
+visible = false
+margin_left = 552.0
+margin_top = 430.0
+margin_right = 730.0
+margin_bottom = 448.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Статус схемы"
+valign = 1
+autowrap = true
+
+[node name="SaveToFile" type="Button" parent="MainData"]
+anchor_left = 0.742188
+anchor_top = 0.89391
+anchor_right = 0.916016
+anchor_bottom = 0.952849
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Сохранить в файл"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Save" type="Button" parent="MainData"]
+anchor_left = 0.743164
+anchor_top = 0.819254
+anchor_right = 0.916992
+anchor_bottom = 0.878193
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Сохранить"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SaveToFile" type="FileDialog" parent="."]
+margin_top = 4.0
+margin_right = 794.0
+margin_bottom = 480.0
+theme = SubResource( 11 )
+popup_exclusive = true
+window_title = "Сохранить файл"
+dialog_text = "Выберите файл для просмотра"
+dialog_autowrap = true
+access = 2
+filters = PoolStringArray( "*.rmdata" )
+show_hidden_files = true
+
+[node name="ChoosePhoto" type="FileDialog" parent="."]
+margin_top = 4.0
+margin_right = 794.0
+margin_bottom = 480.0
+theme = SubResource( 11 )
+popup_exclusive = true
+window_title = "Открыть файл"
+dialog_text = "Выберите файл для просмотра"
+dialog_autowrap = true
+mode = 0
+access = 2
+filters = PoolStringArray( "*.png" )
+show_hidden_files = true
+
+[node name="LoadFile" type="FileDialog" parent="."]
+margin_top = 4.0
+margin_right = 794.0
+margin_bottom = 480.0
+theme = SubResource( 12 )
+popup_exclusive = true
+window_title = "Открыть файл"
+dialog_text = "Выберите файл для просмотра"
+dialog_autowrap = true
+mode = 0
+access = 2
+filters = PoolStringArray( "*.rmdata" )
+show_hidden_files = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+timeout = 1.0
+
+[node name="HTTPLoadPhoto" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="ExitBtn" to="." method="_on_ExitBtn_pressed"]
+[connection signal="pressed" from="Based/CreateBtn" to="." method="_on_CreateBtn_pressed"]
+[connection signal="pressed" from="Based/LoadBtn" to="." method="_on_LoadBtn_pressed"]
+[connection signal="text_changed" from="MainData/NameLine" to="." method="_on_NameLine_text_changed"]
+[connection signal="text_changed" from="MainData/TagLine" to="." method="_on_TagLine_text_changed"]
+[connection signal="text_changed" from="MainData/DescField" to="." method="_on_DescField_text_changed"]
+[connection signal="pressed" from="MainData/ChoosePhotoBtn" to="." method="_on_ChoosePhotoBtn_pressed"]
+[connection signal="pressed" from="MainData/AdminSelectedBtn" to="." method="_on_AdminSelectedBtn_pressed"]
+[connection signal="pressed" from="MainData/ModerSelectedBtn" to="." method="_on_ModerSelectedBtn_pressed"]
+[connection signal="pressed" from="MainData/BlockBtn" to="." method="_on_BlockBtn_pressed"]
+[connection signal="item_selected" from="MainData/StatusLine" to="." method="_on_StatusLine_item_selected"]
+[connection signal="pressed" from="MainData/SaveToFile" to="." method="_on_SaveToFile_pressed"]
+[connection signal="pressed" from="MainData/Save" to="." method="_on_Save_pressed"]
+[connection signal="file_selected" from="SaveToFile" to="." method="_on_SaveToFile_file_selected"]
+[connection signal="file_selected" from="ChoosePhoto" to="." method="_on_ChoosePhoto_file_selected"]
+[connection signal="file_selected" from="LoadFile" to="." method="_on_LoadFile_file_selected"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPLoadPhoto" to="." method="_on_HTTPLoadPhoto_request_completed"]

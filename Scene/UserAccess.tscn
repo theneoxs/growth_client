@@ -1,0 +1,401 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resource/Fonts/ButtonStyle.tres" type="Theme" id=1]
+[ext_resource path="res://Scene/UserAccess.gd" type="Script" id=2]
+[ext_resource path="res://Resource/Fonts/Fifaks10Dev1.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Resource/Fonts/TextFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resource/Fonts/TextFontHeader.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Scene/Loader.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=14]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 1.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.737255, 0.737255, 0.737255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 0.45098 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.945098, 0.945098, 0.945098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.431373, 0.431373, 0.431373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id=6]
+color = Color( 1, 1, 1, 0 )
+thickness = 10
+vertical = true
+
+[sub_resource type="DynamicFont" id=17]
+size = 14
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=18]
+default_font = SubResource( 17 )
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+LineEdit/fonts/font = ExtResource( 4 )
+LineEdit/styles/normal = SubResource( 13 )
+LineEdit/styles/read_only = SubResource( 14 )
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/styles/normal = SubResource( 15 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_readonly = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+TextEdit/styles/normal = SubResource( 16 )
+TextEdit/styles/read_only = SubResource( 14 )
+VScrollBar/styles/grabber = SubResource( 7 )
+VScrollBar/styles/grabber_highlight = SubResource( 8 )
+VScrollBar/styles/grabber_pressed = SubResource( 5 )
+VScrollBar/styles/scroll = SubResource( 6 )
+
+[node name="UserAccess" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BackBtn" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -73.0
+margin_top = -74.0
+margin_right = 77.0002
+margin_bottom = -44.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Назад"
+
+[node name="SaveBtn" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -73.0
+margin_top = -113.0
+margin_right = 77.0002
+margin_bottom = -83.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Сохранить"
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 89.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "Пользователи"
+align = 1
+valign = 1
+
+[node name="NameLabel" type="Label" parent="."]
+anchor_left = 0.250977
+anchor_top = 0.3
+anchor_right = 0.467774
+anchor_bottom = 0.33
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Имя:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Name" type="LineEdit" parent="."]
+anchor_left = 0.250977
+anchor_top = 0.33
+anchor_right = 0.467774
+anchor_bottom = 0.377152
+margin_bottom = 1.52588e-05
+theme = SubResource( 18 )
+max_length = 40
+placeholder_text = "Введите свое имя"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SurnameLabel" type="Label" parent="."]
+anchor_left = 0.250977
+anchor_top = 0.395
+anchor_right = 0.467774
+anchor_bottom = 0.425
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Фамилия:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Surname" type="LineEdit" parent="."]
+anchor_left = 0.250977
+anchor_top = 0.428333
+anchor_right = 0.467774
+anchor_bottom = 0.475484
+margin_bottom = 1.52588e-05
+theme = SubResource( 18 )
+max_length = 40
+secret_character = "/"
+placeholder_text = "Введите свою фамилию"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PosLabel" type="Label" parent="."]
+anchor_left = 0.250977
+anchor_top = 0.496667
+anchor_right = 0.467774
+anchor_bottom = 0.526667
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Должность:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Position" type="LineEdit" parent="."]
+anchor_left = 0.250977
+anchor_top = 0.53
+anchor_right = 0.467774
+anchor_bottom = 0.577151
+theme = SubResource( 18 )
+max_length = 40
+secret_character = "/"
+placeholder_text = "Введите свою должность"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BranchLabel" type="Label" parent="."]
+anchor_left = 0.250977
+anchor_top = 0.593333
+anchor_right = 0.467774
+anchor_bottom = 0.623333
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Отдел:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BranchLine" type="OptionButton" parent="."]
+anchor_left = 0.249023
+anchor_top = 0.626666
+anchor_right = 0.467773
+anchor_bottom = 0.673333
+margin_bottom = -3.05176e-05
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RoleLabel" type="Label" parent="."]
+anchor_left = 0.538087
+anchor_top = 0.593333
+anchor_right = 0.754884
+anchor_bottom = 0.623333
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Роль:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RoleLine" type="OptionButton" parent="."]
+anchor_left = 0.536133
+anchor_top = 0.626666
+anchor_right = 0.754883
+anchor_bottom = 0.673333
+margin_bottom = -3.05176e-05
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="UserLabel" type="Label" parent="."]
+anchor_left = 0.388672
+anchor_top = 0.183333
+anchor_right = 0.60547
+anchor_bottom = 0.213333
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Пользователь:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="UserLine" type="OptionButton" parent="."]
+anchor_left = 0.386719
+anchor_top = 0.216666
+anchor_right = 0.605469
+anchor_bottom = 0.263333
+margin_bottom = -3.05176e-05
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LoginLabel" type="Label" parent="."]
+anchor_left = 0.536133
+anchor_top = 0.3
+anchor_right = 0.75293
+anchor_bottom = 0.33
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Логин:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Login" type="LineEdit" parent="."]
+anchor_left = 0.536133
+anchor_top = 0.333333
+anchor_right = 0.75293
+anchor_bottom = 0.380485
+margin_bottom = -1.52588e-05
+theme = SubResource( 18 )
+max_length = 40
+secret_character = "/"
+placeholder_text = "Введите свой логин"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PasswordLabel" type="Label" parent="."]
+anchor_left = 0.536133
+anchor_top = 0.395
+anchor_right = 0.75293
+anchor_bottom = 0.425
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Пароль:"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Password" type="LineEdit" parent="."]
+anchor_left = 0.536133
+anchor_top = 0.428333
+anchor_right = 0.75293
+anchor_bottom = 0.475485
+theme = SubResource( 18 )
+max_length = 40
+secret = true
+secret_character = "/"
+placeholder_text = "Введите свой пароль"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ShowPasswdMain" type="Button" parent="Password"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 159.0
+margin_top = -14.1453
+margin_right = 187.0
+margin_bottom = 15.8547
+rect_rotation = 89.9999
+theme = ExtResource( 1 )
+toggle_mode = true
+text = "(|)"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPData" type="HTTPRequest" parent="."]
+timeout = 1.0
+
+[node name="Loader" parent="." instance=ExtResource( 6 )]
+
+[connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="pressed" from="SaveBtn" to="." method="_on_SaveBtn_pressed"]
+[connection signal="text_changed" from="Name" to="." method="_on_Name_text_changed"]
+[connection signal="text_changed" from="Surname" to="." method="_on_Surname_text_changed"]
+[connection signal="text_changed" from="Position" to="." method="_on_Position_text_changed"]
+[connection signal="item_selected" from="RoleLine" to="." method="_on_RoleLine_item_selected"]
+[connection signal="item_selected" from="UserLine" to="." method="_on_UserLine_item_selected"]
+[connection signal="text_changed" from="Login" to="." method="_on_Login_text_changed"]
+[connection signal="text_changed" from="Password" to="." method="_on_Password_text_changed"]
+[connection signal="pressed" from="Password/ShowPasswdMain" to="." method="_on_ShowPasswdMain_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPData" to="." method="_on_HTTPData_request_completed"]

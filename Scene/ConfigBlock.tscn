@@ -1,0 +1,749 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Resource/Fonts/ButtonStyle.tres" type="Theme" id=1]
+[ext_resource path="res://Scene/BlockData.gd" type="Script" id=2]
+[ext_resource path="res://Resource/Fonts/TextFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resource/Fonts/TextFontSubHeader.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resource/Fonts/Fifaks10Dev1.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="Theme" id=11]
+default_font = ExtResource( 3 )
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+LineEdit/fonts/font = ExtResource( 3 )
+LineEdit/styles/normal = SubResource( 1 )
+LineEdit/styles/read_only = SubResource( 3 )
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/styles/normal = SubResource( 10 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_readonly = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+TextEdit/styles/normal = SubResource( 4 )
+TextEdit/styles/read_only = SubResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=14]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 1.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.737255, 0.737255, 0.737255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 0.45098 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.945098, 0.945098, 0.945098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.431373, 0.431373, 0.431373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id=6]
+color = Color( 1, 1, 1, 0 )
+thickness = 10
+vertical = true
+
+[sub_resource type="DynamicFont" id=17]
+size = 14
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 17 )
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+LineEdit/fonts/font = ExtResource( 3 )
+LineEdit/styles/normal = SubResource( 13 )
+LineEdit/styles/read_only = SubResource( 14 )
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/styles/normal = SubResource( 15 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_readonly = Color( 0.258824, 0.258824, 0.258824, 0.501961 )
+TextEdit/styles/normal = SubResource( 16 )
+TextEdit/styles/read_only = SubResource( 14 )
+VScrollBar/styles/grabber = SubResource( 7 )
+VScrollBar/styles/grabber_highlight = SubResource( 8 )
+VScrollBar/styles/grabber_pressed = SubResource( 5 )
+VScrollBar/styles/scroll = SubResource( 6 )
+
+[node name="BlockData" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Tree" type="Tree" parent="."]
+margin_left = 38.0
+margin_top = 36.0
+margin_right = 591.0
+margin_bottom = 496.0
+theme = ExtResource( 1 )
+columns = 3
+column_titles_visible = true
+hide_root = true
+select_mode = 1
+
+[node name="BackBtn" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -169.0
+margin_top = -74.0
+margin_right = -18.9998
+margin_bottom = -44.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Назад"
+
+[node name="SaveBtn" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = -74.0
+margin_right = 162.0
+margin_bottom = -44.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Сохранить"
+
+[node name="InfoData" type="Control" parent="."]
+anchor_left = 0.618164
+anchor_top = 0.0633333
+anchor_right = 0.956055
+anchor_bottom = 0.826667
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Header" type="Label" parent="InfoData"]
+anchor_right = 1.0
+anchor_bottom = 0.0524017
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Информация по блоку"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NameLine" type="LineEdit" parent="InfoData"]
+anchor_left = 0.00289017
+anchor_top = 0.137555
+anchor_right = 1.0
+anchor_bottom = 0.18559
+theme = SubResource( 11 )
+max_length = 50
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NameLabel" type="Label" parent="InfoData"]
+anchor_top = 0.0960699
+anchor_right = 0.786127
+anchor_bottom = 0.135371
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Название блока"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="DescEdit" type="TextEdit" parent="InfoData"]
+anchor_left = 0.00289017
+anchor_top = 0.266376
+anchor_right = 1.0
+anchor_bottom = 0.565502
+theme = SubResource( 2 )
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="DescLabel" type="Label" parent="InfoData"]
+anchor_top = 0.224891
+anchor_right = 0.786127
+anchor_bottom = 0.264192
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Содержание"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LevelLine" type="LineEdit" parent="InfoData"]
+anchor_left = 0.00289017
+anchor_top = 0.655022
+anchor_right = 1.0
+anchor_bottom = 0.703057
+theme = SubResource( 11 )
+max_length = 3
+placeholder_text = "xxx"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LevelLabel" type="Label" parent="InfoData"]
+anchor_top = 0.613537
+anchor_right = 0.786127
+anchor_bottom = 0.652838
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Уровень знаний блока"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NewBtn" type="Button" parent="InfoData"]
+anchor_left = 0.00289017
+anchor_top = 0.766376
+anchor_right = 1.0
+anchor_bottom = 0.831878
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Создать новый блок"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="UpdateBtn" type="Button" parent="InfoData"]
+anchor_left = 0.00289026
+anchor_top = 0.853712
+anchor_right = 0.436417
+anchor_bottom = 0.919214
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Переместить блок"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="DeleteBtn" type="Button" parent="InfoData"]
+anchor_left = 0.566474
+anchor_top = 0.853712
+anchor_right = 1.0
+anchor_bottom = 0.919214
+margin_left = 1.52588e-05
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Удалить блок"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AddData" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="AddData"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.360784 )
+
+[node name="Backgr" type="ColorRect" parent="AddData"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -331.0
+margin_top = -232.0
+margin_right = 331.0
+margin_bottom = 232.0
+
+[node name="CloseBtn" type="Button" parent="AddData/Backgr"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -169.0
+margin_top = -74.0
+margin_right = -18.9998
+margin_bottom = -44.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Назад"
+
+[node name="NewSaveBtn" type="Button" parent="AddData/Backgr"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 23.0
+margin_top = -73.0
+margin_right = 173.0
+margin_bottom = -43.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Сохранить"
+
+[node name="Header" type="Label" parent="AddData/Backgr"]
+anchor_left = 0.160121
+anchor_top = 0.0301724
+anchor_right = 0.839879
+anchor_bottom = 0.0818966
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Создать новый блок"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NewNameLine" type="LineEdit" parent="AddData/Backgr"]
+anchor_left = 0.0830816
+anchor_top = 0.137931
+anchor_right = 0.910876
+anchor_bottom = 0.185345
+hint_tooltip = "Обязательно"
+theme = SubResource( 11 )
+max_length = 50
+placeholder_text = "Обязательно"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NameLabel" type="Label" parent="AddData/Backgr"]
+anchor_left = 0.0830816
+anchor_top = 0.0969828
+anchor_right = 0.910876
+anchor_bottom = 0.135776
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Название блока"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NewDescEdit" type="TextEdit" parent="AddData/Backgr"]
+anchor_left = 0.0830816
+anchor_top = 0.267241
+anchor_right = 0.910876
+anchor_bottom = 0.56681
+hint_tooltip = "Обязательно"
+theme = SubResource( 2 )
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="DescLabel" type="Label" parent="AddData/Backgr"]
+anchor_left = 0.0830816
+anchor_top = 0.224138
+anchor_right = 0.910876
+anchor_bottom = 0.262931
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Содержание"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NewLevelLine" type="LineEdit" parent="AddData/Backgr"]
+anchor_left = 0.0830816
+anchor_top = 0.655172
+anchor_right = 0.356495
+anchor_bottom = 0.702586
+hint_tooltip = "Обязательно"
+theme = SubResource( 11 )
+max_length = 3
+placeholder_text = "xxx"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LevelLabel" type="Label" parent="AddData/Backgr"]
+anchor_left = 0.0830816
+anchor_top = 0.614224
+anchor_right = 0.371601
+anchor_bottom = 0.653017
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Уровень знаний блока"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TypeLabel" type="Label" parent="AddData/Backgr"]
+anchor_left = 0.410876
+anchor_top = 0.614224
+anchor_right = 0.55136
+anchor_bottom = 0.653017
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Тип блока"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TypeLine" type="OptionButton" parent="AddData/Backgr"]
+anchor_left = 0.410876
+anchor_top = 0.653017
+anchor_right = 0.55136
+anchor_bottom = 0.700431
+theme = ExtResource( 1 )
+text = "Главный"
+clip_text = true
+items = [ "Главный", null, false, 0, null, "Побочный", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RelLabel" type="Label" parent="AddData/Backgr"]
+anchor_left = 0.601208
+anchor_top = 0.614224
+anchor_right = 0.910876
+anchor_bottom = 0.653017
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Родитель"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RelLine" type="OptionButton" parent="AddData/Backgr"]
+anchor_left = 0.601208
+anchor_top = 0.653017
+anchor_right = 0.910876
+anchor_bottom = 0.700431
+theme = ExtResource( 1 )
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="UpdateData" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="UpdateData"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.360784 )
+
+[node name="Backgr" type="ColorRect" parent="UpdateData"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -331.0
+margin_top = -137.5
+margin_right = 331.0
+margin_bottom = 137.5
+
+[node name="CloseUpdateBtn" type="Button" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -169.0
+margin_top = -74.0
+margin_right = -18.9998
+margin_bottom = -44.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Назад"
+
+[node name="NewUpdateBtn" type="Button" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 23.0
+margin_top = -73.0
+margin_right = 173.0
+margin_bottom = -43.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 1 )
+text = "Сохранить"
+
+[node name="Header" type="Label" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 0.0509091
+anchor_right = 0.5
+anchor_bottom = 0.0509091
+margin_left = -225.0
+margin_top = 14.0
+margin_right = 225.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Переместить блок"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="UpdNameLine" type="LineEdit" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 0.0509091
+anchor_right = 0.5
+anchor_bottom = 0.0509091
+margin_left = -276.0
+margin_top = 64.0
+margin_right = 272.0
+margin_bottom = 86.0
+theme = SubResource( 11 )
+text = "Тестовый текст"
+max_length = 50
+editable = false
+placeholder_text = "Обязательно"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NameLabel" type="Label" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 0.0509091
+anchor_right = 0.5
+anchor_bottom = 0.0509091
+margin_left = -276.0
+margin_top = 45.0
+margin_right = 272.0
+margin_bottom = 63.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Название блока"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TypeLabel" type="Label" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 0.0509091
+anchor_right = 0.5
+anchor_bottom = 0.0509091
+margin_left = -276.0
+margin_top = 104.0
+margin_right = -136.0
+margin_bottom = 122.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Новый тип блока"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TypeUpdLine" type="OptionButton" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 0.0509091
+anchor_right = 0.5
+anchor_bottom = 0.0509091
+margin_left = -276.0
+margin_top = 122.0
+margin_right = -136.0
+margin_bottom = 144.0
+theme = ExtResource( 1 )
+text = "Главный"
+clip_text = true
+items = [ "Главный", null, false, 0, null, "Побочный", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RelLabel" type="Label" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 0.0509091
+anchor_right = 0.5
+anchor_bottom = 0.0509091
+margin_left = -110.0
+margin_top = 104.0
+margin_right = 272.0
+margin_bottom = 122.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Новый родитель"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RelUpdLine" type="OptionButton" parent="UpdateData/Backgr"]
+anchor_left = 0.5
+anchor_top = 0.0509091
+anchor_right = 0.5
+anchor_bottom = 0.0509091
+margin_left = -110.0
+margin_top = 122.0
+margin_right = 272.0
+margin_bottom = 144.0
+theme = ExtResource( 1 )
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="item_selected" from="Tree" to="." method="_on_Tree_item_selected"]
+[connection signal="nothing_selected" from="Tree" to="." method="_on_Tree_nothing_selected"]
+[connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="pressed" from="SaveBtn" to="." method="_on_SaveBtn_pressed"]
+[connection signal="text_changed" from="InfoData/NameLine" to="." method="_on_NameLine_text_changed"]
+[connection signal="text_changed" from="InfoData/DescEdit" to="." method="_on_DescEdit_text_changed"]
+[connection signal="text_changed" from="InfoData/LevelLine" to="." method="_on_LevelLine_text_changed"]
+[connection signal="pressed" from="InfoData/NewBtn" to="." method="_on_NewBtn_pressed"]
+[connection signal="pressed" from="InfoData/UpdateBtn" to="." method="_on_UpdateBtn_pressed"]
+[connection signal="pressed" from="InfoData/DeleteBtn" to="." method="_on_DeleteBtn_pressed"]
+[connection signal="pressed" from="AddData/Backgr/CloseBtn" to="." method="_on_CloseBtn_pressed"]
+[connection signal="pressed" from="AddData/Backgr/NewSaveBtn" to="." method="_on_NewSaveBtn_pressed"]
+[connection signal="item_selected" from="AddData/Backgr/TypeLine" to="." method="_on_TypeLine_item_selected"]
+[connection signal="pressed" from="UpdateData/Backgr/CloseUpdateBtn" to="." method="_on_CloseUpdateBtn_pressed"]
+[connection signal="pressed" from="UpdateData/Backgr/NewUpdateBtn" to="." method="_on_NewUpdateBtn_pressed"]
+[connection signal="item_selected" from="UpdateData/Backgr/TypeUpdLine" to="." method="_on_TypeUpdLine_item_selected"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

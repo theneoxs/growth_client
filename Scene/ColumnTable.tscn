@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+margin_right = 924.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+alignment = 1

@@ -1,0 +1,374 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Resource/Fonts/TextFontHeader.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resource/TestElements/photo_2023-01-04_00-30-16.jpg" type="Texture" id=2]
+[ext_resource path="res://Scene/Loader.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resource/Fonts/ButtonStyle.tres" type="Theme" id=4]
+[ext_resource path="res://Scene/Search.gd" type="Script" id=5]
+[ext_resource path="res://Resource/Fonts/TextFontSubHeader.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Resource/Fonts/TextFont.tres" type="DynamicFont" id=7]
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.737255, 0.737255, 0.737255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 0.45098 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.945098, 0.945098, 0.945098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.431373, 0.431373, 0.431373, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id=20]
+color = Color( 1, 1, 1, 0 )
+thickness = 10
+vertical = true
+
+[sub_resource type="Theme" id=9]
+VScrollBar/styles/grabber = SubResource( 21 )
+VScrollBar/styles/grabber_highlight = SubResource( 18 )
+VScrollBar/styles/grabber_pressed = SubResource( 19 )
+VScrollBar/styles/scroll = SubResource( 20 )
+
+[node name="Search" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="FindControl" type="Control" parent="."]
+anchor_right = 0.355469
+anchor_bottom = 1.0
+margin_right = -14.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="FindControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.929412, 0.929412, 0.929412, 1 )
+
+[node name="Label" type="Label" parent="FindControl"]
+anchor_right = 1.0
+anchor_bottom = 0.111667
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Поиск"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="FindControl"]
+anchor_top = 0.155
+anchor_right = 0.997143
+anchor_bottom = 0.89
+margin_right = 1.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FindControl/ScrollContainer"]
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ErrLabel" type="Label" parent="FindControl"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -134.0
+margin_top = -14.0
+margin_right = 134.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Данных нет"
+align = 1
+valign = 1
+
+[node name="UpdateBtn" type="Button" parent="FindControl"]
+anchor_left = 0.522857
+anchor_top = 0.915
+anchor_right = 0.808571
+anchor_bottom = 0.965
+theme = ExtResource( 4 )
+text = "Обновить"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BackBtn" type="Button" parent="FindControl"]
+anchor_left = 0.202857
+anchor_top = 0.915
+anchor_right = 0.488571
+anchor_bottom = 0.965
+theme = ExtResource( 4 )
+text = "Назад"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VSeparator" type="VSeparator" parent="FindControl"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.00024
+margin_right = 1.99976
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DataField" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -673.0
+
+[node name="Label" type="Label" parent="DataField"]
+anchor_right = 1.0
+anchor_bottom = 0.111667
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Информация о схеме"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="DataField"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 44.0
+margin_top = -222.0
+margin_right = 109.0
+margin_bottom = -157.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="Name" type="Label" parent="DataField/TextureRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 19.0
+margin_top = -12.0
+margin_right = 528.0
+margin_bottom = 12.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "Название"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DataField"]
+margin_left = 28.0
+margin_top = 166.0
+margin_right = 638.0
+margin_bottom = 500.0
+
+[node name="Admins" type="Label" parent="DataField/VBoxContainer"]
+margin_right = 610.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "Админы:"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Moders" type="Label" parent="DataField/VBoxContainer"]
+margin_top = 28.0
+margin_right = 610.0
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "Модераторы:"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Empty" type="Label" parent="DataField/VBoxContainer"]
+margin_top = 56.0
+margin_right = 610.0
+margin_bottom = 80.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Describe" type="RichTextLabel" parent="DataField/VBoxContainer"]
+margin_top = 84.0
+margin_right = 610.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 0, 200 )
+theme = SubResource( 9 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "Информация:"
+text = "Информация:"
+
+[node name="Empty2" type="Label" parent="DataField/VBoxContainer"]
+margin_top = 288.0
+margin_right = 610.0
+margin_bottom = 312.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Progress" type="Label" parent="DataField/VBoxContainer"]
+margin_top = 316.0
+margin_right = 610.0
+margin_bottom = 334.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Прогресс:"
+autowrap = true
+max_lines_visible = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DataField"]
+margin_left = 220.0
+margin_top = 547.0
+margin_right = 650.0
+margin_bottom = 577.0
+custom_constants/separation = 10
+alignment = 2
+
+[node name="FavoriteBtn" type="Button" parent="DataField/HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+theme = ExtResource( 4 )
+toggle_mode = true
+text = "В избранное"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ChangeBtn" type="Button" parent="DataField/HBoxContainer"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+theme = ExtResource( 4 )
+text = "Изменить"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ModerateBtn" type="Button" parent="DataField/HBoxContainer"]
+margin_left = 220.0
+margin_right = 320.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+theme = ExtResource( 4 )
+text = "Проверить"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="OpenBtn" type="Button" parent="DataField/HBoxContainer"]
+margin_left = 330.0
+margin_right = 430.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+theme = ExtResource( 4 )
+text = "Открыть"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Role" type="Label" parent="DataField"]
+margin_left = 25.0
+margin_top = 553.0
+margin_right = 205.0
+margin_bottom = 571.0
+rect_min_size = Vector2( 180, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "Доступ: "
+valign = 1
+clip_text = true
+max_lines_visible = 5
+
+[node name="Hider" type="ColorRect" parent="DataField"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -533.0
+
+[node name="Label" type="Label" parent="DataField/Hider"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -242.5
+margin_top = -167.5
+margin_right = 242.5
+margin_bottom = 167.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Выберите схему для просмотра, или импортируйте её"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Loader" parent="." instance=ExtResource( 3 )]
+color = Color( 1, 1, 1, 0.886275 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPGetSchemaData" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="FindControl/UpdateBtn" to="." method="_on_UpdateBtn_pressed"]
+[connection signal="pressed" from="FindControl/BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="DataField/HBoxContainer/FavoriteBtn" to="." method="_on_FavoriteBtn_pressed"]
+[connection signal="pressed" from="DataField/HBoxContainer/ChangeBtn" to="." method="_on_ChangeBtn_pressed"]
+[connection signal="pressed" from="DataField/HBoxContainer/ModerateBtn" to="." method="_on_ModerateBtn_pressed"]
+[connection signal="pressed" from="DataField/HBoxContainer/OpenBtn" to="." method="_on_OpenBtn_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPGetSchemaData" to="." method="_on_HTTPGetSchemaData_request_completed"]

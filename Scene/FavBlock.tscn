@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resource/Fonts/TextFontSubHeader.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resource/Fonts/ButtonStyle.tres" type="Theme" id=2]
+[ext_resource path="res://Scene/FavBlock.gd" type="Script" id=3]
+[ext_resource path="res://Scene/Loader.tscn" type="PackedScene" id=4]
+
+[node name="FavBlock" type="Control"]
+anchor_right = 0.453125
+anchor_bottom = 0.653333
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0, 0, 0, 1 )
+editor_only = false
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -40.0001
+margin_bottom = 37.9999
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Temporarily not working
+
+Зона для отображения избранных блоков"
+align = 1
+valign = 1
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+tab_align = 0
+
+[node name="NothingFindLabel" type="Label" parent="."]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -40.0001
+margin_bottom = 37.9999
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Нет избранных блоков"
+align = 1
+valign = 1
+
+[node name="Loader" parent="." instance=ExtResource( 4 )]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPFavorite" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPFavorite" to="." method="_on_HTTPFavorite_request_completed"]

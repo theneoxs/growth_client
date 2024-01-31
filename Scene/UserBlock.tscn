@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resource/TestElements/photo_2023-01-04_00-30-16.jpg" type="Texture" id=1]
+[ext_resource path="res://Resource/Fonts/TextFontUnderText.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resource/Fonts/TextFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scene/UserBlock.gd" type="Script" id=4]
+
+[node name="UserBlock" type="Control"]
+anchor_right = 0.341797
+anchor_bottom = 0.116667
+margin_right = -10.0
+rect_min_size = Vector2( 350, 70 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 18.0
+margin_top = -19.0
+margin_right = 56.0
+margin_bottom = 19.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="Header" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 85.0
+margin_top = -18.0
+margin_right = 288.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Заголовок 1"
+valign = 1
+clip_text = true
+
+[node name="Subheader" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 85.0
+margin_top = -1.0
+margin_right = 288.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0.52549, 0.52549, 0.52549, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Заголовок 1"
+valign = 1
+clip_text = true
+
+[node name="PercentWork" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -56.0
+margin_top = -7.0
+margin_right = -16.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "100%"
+align = 1
+valign = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPGetPhoto" type="HTTPRequest" parent="."]
+
+[connection signal="gui_input" from="." to="." method="_on_UserBlock_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_UserBlock_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_UserBlock_mouse_exited"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPGetPhoto" to="." method="_on_HTTPGetPhoto_request_completed"]

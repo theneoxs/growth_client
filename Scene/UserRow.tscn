@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resource/Fonts/TextFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scene/UserRow.gd" type="Script" id=2]
+[ext_resource path="res://Resource/Fonts/ButtonStyle.tres" type="Theme" id=3]
+
+[node name="UserRow" type="Control"]
+margin_right = 410.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 410, 40 )
+script = ExtResource( 2 )
+
+[node name="CheckUser" type="CheckBox" parent="."]
+anchor_left = 0.0146341
+anchor_top = 0.2
+anchor_right = 0.0731707
+anchor_bottom = 0.8
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="IDUser" type="Label" parent="."]
+anchor_left = 0.0926829
+anchor_top = 0.275
+anchor_right = 0.256098
+anchor_bottom = 0.725
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "1"
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Divider" type="Label" parent="."]
+anchor_left = 0.260976
+anchor_top = 0.275
+anchor_right = 0.282927
+anchor_bottom = 0.725
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "|"
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NameUser" type="Label" parent="."]
+anchor_left = 0.309756
+anchor_top = 0.275
+anchor_right = 0.939024
+anchor_bottom = 0.725
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Зубенко Михаил Петрович"
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PickBtn" type="Button" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -199.0
+margin_top = -34.0
+margin_right = -99.0
+margin_bottom = -8.0
+rect_min_size = Vector2( 100, 26 )
+theme = ExtResource( 3 )
+text = "Выбрать"
+
+[connection signal="pressed" from="CheckUser" to="." method="_on_CheckUser_pressed"]
+[connection signal="pressed" from="PickBtn" to="." method="_on_PickBtn_pressed"]

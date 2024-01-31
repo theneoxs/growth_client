@@ -1,0 +1,121 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resource/Fonts/TextFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resource/Fonts/TextFontSubHeader.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resource/Fonts/ButtonStyle.tres" type="Theme" id=3]
+[ext_resource path="res://Scene/Notification.gd" type="Script" id=4]
+
+[node name="Notification" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="CoreDesc" type="ColorRect" parent="."]
+anchor_left = 0.233398
+anchor_top = 0.25
+anchor_right = 0.766602
+anchor_bottom = 0.75
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Header" type="Label" parent="CoreDesc"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -236.0
+margin_top = -130.0
+margin_right = 236.0
+margin_bottom = -84.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Ошибка"
+align = 1
+valign = 1
+
+[node name="Text" type="Label" parent="CoreDesc"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -236.0
+margin_top = -70.0
+margin_right = 236.0
+margin_bottom = 70.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Что-то пошло не так, попробуйте ещё раз
+Что-то пошло не так, попробуйте ещё раз
+Что-то пошло не так, попробуйте ещё раз
+Что-то пошло не так, попробуйте ещё раз
+Что-то пошло не так, попробуйте ещё раз
+Что-то пошло не так, попробуйте ещё раз"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = -0.00505051
+max_lines_visible = 6
+
+[node name="ExitControl" type="Control" parent="CoreDesc"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -74.0
+
+[node name="ExitBtn" type="Button" parent="CoreDesc/ExitControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -15.0
+margin_right = 75.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 3 )
+text = "Ок"
+
+[node name="ChooseControl" type="Control" parent="CoreDesc"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -74.0
+
+[node name="DeclineBtn" type="Button" parent="CoreDesc/ChooseControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.0
+margin_top = -15.0
+margin_right = -40.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0.847059, 0, 0, 1 )
+text = "Отказаться"
+
+[node name="AccessBtn" type="Button" parent="CoreDesc/ChooseControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.0
+margin_top = -15.0
+margin_right = 192.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 150, 30 )
+theme = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0431373, 0.682353, 0, 1 )
+text = "Согласиться"
+
+[connection signal="pressed" from="CoreDesc/ExitControl/ExitBtn" to="." method="_on_ExitBtn_pressed"]
+[connection signal="pressed" from="CoreDesc/ChooseControl/DeclineBtn" to="." method="_on_DeclineBtn_pressed"]
+[connection signal="pressed" from="CoreDesc/ChooseControl/AccessBtn" to="." method="_on_AccessBtn_pressed"]
